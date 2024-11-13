@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Repository - Sistem de Gestionare a Elevilor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .developer-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .developer-item {
+            background: #e9e9e9;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .add-developer-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .add-developer-form input,
+        .add-developer-form textarea,
+        .add-developer-form button {
+            margin: 5px 0;
+            padding: 10px;
+            font-size: 1em;
+        }
+        .add-developer-form button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .add-developer-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Developer Repository - Sistem de Gestionare a Elevilor</h1>
+        
+        <!-- Lista de Dezvoltatori -->
+        <ul class="developer-list">
+            <li class="developer-item">
+                <strong>Nume:</strong> Andrei Popescu<br>
+                <strong>Rol:</strong> Frontend Developer<br>
+                <strong>Descriere:</strong> Lucrează la partea de interfață a utilizatorului și design-ul aplicației.
+            </li>
+            <li class="developer-item">
+                <strong>Nume:</strong> Ioana Ionescu<br>
+                <strong>Rol:</strong> Backend Developer<br>
+                <strong>Descriere:</strong> Responsabilă pentru funcționalitățile backend și gestionarea bazelor de date.
+            </li>
+        </ul>
+
+        <!-- Formular pentru adăugarea unui nou dezvoltator -->
+        <h2>Adaugă un nou Dezvoltator</h2>
+        <form class="add-developer-form" action="submit_developer.php" method="post">
+            <input type="text" name="developer_name" placeholder="Nume Dezvoltator" required>
+            <input type="text" name="developer_role" placeholder="Rol Dezvoltator" required>
+            <textarea name="developer_description" placeholder="Descriere Dezvoltator" rows="4" required></textarea>
+            <button type="submit">Adaugă Dezvoltator</button>
+        </form>
+    </div>
+</body>
+</html>
